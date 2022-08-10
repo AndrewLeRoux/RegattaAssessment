@@ -49,12 +49,13 @@ public class Account {
             if (this.investment.equals("Individual") && amount > 500) {
                 throw new IllegalArgumentException("Individual accounts have a withdrawal limit of 500 dollars");
             }
+            balance -= amount;
         } else {
             balance -= amount;
         }
 
     }
-    
+
     public void transfer(Account other, double amount) {
         other.deposit(amount);
         this.withdraw(amount);

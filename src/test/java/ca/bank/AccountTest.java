@@ -10,7 +10,6 @@ class AccountTest {
     Account first = new Account("Andy", "Checking", 10000);
     Account second = new Account("John", "Investment", 600, "Individual");
 
-
     @Test
     @DisplayName("Test deposit function")
     void testDeposit() {
@@ -18,7 +17,6 @@ class AccountTest {
         first.deposit(400);
         assertEquals(initialBalance + 400, first.getBalance(), "Deposit should increase balance by the parameter amount");
     }
-
 
     @Test
     @DisplayName("Test withdraw function")
@@ -49,7 +47,6 @@ class AccountTest {
         });
         assertEquals("Individual accounts have a withdrawal limit of 500 dollars", exception.getMessage(), "Individual accounts have a withdrawal limit of 500 dollars");
     }
-
 
     @Test
     void testTransfer() {
