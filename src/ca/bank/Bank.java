@@ -15,6 +15,7 @@ public class Bank {
         return name;
     }
 
+    //gets individual account
     public Account getAccount(int index) {
         return accounts[index];
     }

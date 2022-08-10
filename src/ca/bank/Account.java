@@ -6,6 +6,8 @@ public class Account {
     private String type;  //account type
     private String investment; //type of investment account
 
+
+    //for checking account type only
     public Account(String ownerName, String acctType, double initialBalance) {
 
         if (!acctType.equals("Checking")) {
@@ -17,6 +19,7 @@ public class Account {
         balance = initialBalance;
     }
 
+    // for investment account type only. Investment variable is to specify corporate or individual
     public Account(String ownerName, String acctType, double initialBalance, String investmentType) {
 
         if (!acctType.equals("Investment")) {
